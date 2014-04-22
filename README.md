@@ -1,5 +1,7 @@
 # MetaMagic
 
+[![Build Status](https://travis-ci.org/johnotander/meta_magic.svg?branch=master)](https://travis-ci.org/johnotander/meta_magic)
+
 _Currently under development._
 
 ## Installation
