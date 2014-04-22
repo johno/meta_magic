@@ -5,11 +5,11 @@ module MetaMagic
     extend ActiveSupport::Concern
 
     def get_model_instance_variable
-      instance_variable_get(:"@#{ controller_name.classify.downcase }")
+      instance_variable_get(:"@#{ controller_name.classify.underscore.downcase }")
     end
 
     def set_model_instance_variable
-      send(:"set_#{ controller_name.classify.downcase }")
+      send(:"set_#{ controller_name.classify.underscore.downcase }")
     end
   end
 end
