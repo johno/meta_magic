@@ -1,6 +1,6 @@
 # MetaMagic
 
-Under development.
+_Currently under development._
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
 
 ## Contributing
 
