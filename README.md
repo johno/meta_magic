@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/johnotander/meta_magic.svg?branch=master)](https://travis-ci.org/johnotander/meta_magic)
 
-_Currently under development._
+Some useful methods for object-agnostic views, controllers, and models.
 
 ## Installation
 
@@ -20,7 +20,29 @@ Or install it yourself as:
 
 ## Usage
 
+### The Helpers
 
+Sometimes it can be a pain when you need to link to certain actions when you don't necessarily know what type of object you have in a Rails view. The `object_path` and `objects_path` methods make this easy.
+
+First, include helper in your `helpers/application_helper.rb` to gain access to the methods in your view:
+
+```ruby
+module ApplicationHelper
+  include MetaMagic::Helper
+end
+```
+
+Then, link away:
+
+```html+erb
+<%= link_to object.display_name, object_path(@user_object) %> <!-- <a href="/users/:id">John Doe</a> -->
+<%= link_to 'See Activity', object_path(product_object, action: :activities) %> <!-- <a href="/products/:id/activities">See Activity</a> -->
+<%= link_to 'See All', objects_path(@book) %> <!-- <a href="/books">See All</a> -->
+```
+
+### The Controllers
+
+_Coming soon._
 
 ## Contributing
 
