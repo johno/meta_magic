@@ -35,9 +35,14 @@ end
 Then, link away:
 
 ```html+erb
-<%= link_to object.display_name, object_path(@user_object) %> <!-- <a href="/users/:id">John Doe</a> -->
-<%= link_to 'See Activity', object_path(product_object, action: :activities) %> <!-- <a href="/products/:id/activities">See Activity</a> -->
-<%= link_to 'See All', objects_path(@book) %> <!-- <a href="/books">See All</a> -->
+<%= link_to object.display_name, object_path(@user_object) %>
+<!-- <a href="/users/:id">John Doe</a> -->
+
+<%= link_to 'See Activity', object_path(product_object, action: :activities) %>
+<!-- <a href="/products/:id/activities">See Activity</a> -->
+
+<%= link_to 'See All', objects_path(@book) %>
+<!-- <a href="/books">See All</a> -->
 ```
 
 ### The Controllers
