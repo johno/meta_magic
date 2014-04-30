@@ -8,15 +8,21 @@ Some useful methods for object-agnostic views, controllers, and models.
 
 Add this line to your application's Gemfile:
 
-    gem 'meta_magic'
+```ruby
+gem 'meta_magic'
+```
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install meta_magic
+```
+$ gem install meta_magic
+```
 
 ## Usage
 
