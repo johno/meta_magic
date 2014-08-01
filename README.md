@@ -64,21 +64,21 @@ end
 Including Meta Magic will expose a few handy methods that can be used dynamically amongst controllers:
 
 ```ruby
-  def get_model_instance_variable
-      instance_variable_get(:"@#{ controller_name.classify.underscore.downcase }")
-    end
+def get_model_instance_variable
+  instance_variable_get(:"@#{ controller_name.classify.underscore.downcase }")
+end
 
-    def set_model_instance_variable
-      send(:"set_#{ controller_name.classify.underscore.downcase }")
-    end
+def set_model_instance_variable
+  send(:"set_#{ controller_name.classify.underscore.downcase }")
+end
 
-    def assign_models_instance_variable_array
-      instance_variable_set(:"@#{ controller_name }", get_model_class.all)
-    end
+def assign_models_instance_variable_array
+  instance_variable_set(:"@#{ controller_name }", get_model_class.all)
+end
 
-    def get_model_class
-      controller_name.classify.constantize
-    end
+def get_model_class
+  controller_name.classify.constantize
+end
 ```
 
 ## Contributing
