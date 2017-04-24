@@ -15,3 +15,8 @@ end
 class FakeThingsController < ActionController::Base
   include MetaMagic::Controller
 end
+
+class NoModelController < ActionController::Base
+  include MetaMagic::Controller
+end
+

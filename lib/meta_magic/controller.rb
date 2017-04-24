@@ -17,6 +17,10 @@ module MetaMagic
     end
 
     def get_model_class
+      controller_name.classify.safe_constantize
+    end
+
+    def get_model_class!
       controller_name.classify.constantize
     end
   end
